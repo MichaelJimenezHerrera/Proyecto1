@@ -5,9 +5,51 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/css/bootstrap")
     @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/js/bootstrap")
 </head>
+    
+    <style type="text/css"> 
+      body{ 
+      background-image: url('http://www.fondosni.com/images/2012-03-13/Cielo%20Anaranjado-424509.jpg'); 
+      background-repeat: no-repeat; 
+      background-size: 100%; 
+          } 
+    </style>
+
+
+
 <body>
+    <nav class="navbar navbar-inverse " role="navigation">
+        <div>
+            <ul class="nav navbar-nav">
+                <li><a href="/Home/Index">Home</a></li>
+                <li><a href="/Home/Contact">Contact</a></li>
+                <li><a href="/Home/Recommendations">Recommendations</a></li>
+                <li><a href="/Home/Recommend">Recommend</a></li>
+            </ul>
+        </div>
+
+        <marquee scrollamount="3" behavior="alternate" bgcolor="#FFA100" > 
+           <div id="carr" >
+             <img src="Content/themes/base/images/1.jpg" width="220px"  >
+             <img src="Content/themes/base/images/2.jpg" width="170px"  >
+             <img src="Content/themes/base/images/3.jpg" width="220px"  >
+             <img src="Content/themes/base/images/4.jpg" width="170px"  >
+             <img src="Content/themes/base/images/5.jpg" width="170px"  >
+             <img src="Content/themes/base/images/6.jpg" width="170px"  >
+             <img src="Content/themes/base/images/7.jpg" width="170px"  >
+             <img src="Content/themes/base/images/8.jpg" width="170px"  >
+             <img src="Content/themes/base/images/9.jpg" width="200px"  >
+             <img src="Content/themes/base/images/10.jpg" width="200px"  >
+          </div> 
+       </marquee>
+   </nav>
+    
+     
+   
+
     @RenderBody()
 
     @Scripts.Render("~/bundles/jquery")
