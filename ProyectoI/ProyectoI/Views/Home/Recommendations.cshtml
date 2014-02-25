@@ -2,4 +2,23 @@
     ViewBag.Title = "Recommendations";
 }
 
-<h2>Recommendations</h2>
+<h4 align="center">COMENTARIOS</h4>
+<div align="center">
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Comentarios</th>
+            <th>Fecha</th>
+        </tr>  
+        @foreach (var item in ViewBag.comentarios)
+        {                       
+            <tr>           
+                <td>@item.Nombre</td>
+                <td>@item.Cometario</td>
+                <td>@item.Fecha</td>          
+            </tr>
+            
+        }
+    </table>
+
+</div>

@@ -4,10 +4,12 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Net.Mail;
+using ProyectoI.Models;
 namespace ProyectoI.Controllers
 {
     public class HomeController : Controller
     {
+        private ComentarioDb db = new ComentarioDb();
         //
         // GET: /Home/
 
@@ -78,6 +80,8 @@ namespace ProyectoI.Controllers
 
         public ActionResult Recommendations()
         {
+            List<Comentario> comentarios = db.Comentarios.ToList();
+            ViewBag.comentarios = comentarios;
             return View();
         }
 
@@ -86,6 +90,22 @@ namespace ProyectoI.Controllers
             return View();
         }
 
-       
+       [HttpPost]
+        public ActionResult Recommend(string nombre = "", string comentario = "")
+        {
+            DateTime Hoy = DateTime.Now;
+            string fecha = Hoy.ToString("d/M/yyyy hh:mm:ss tt"); 
+            Comentario nueva = new Comentario();
+            nueva.Nombre = nombre;
+            nueva.Cometario = comentario;
+            nueva. Fecha=fecha ;
+            if (ModelState.IsValid)
+            {
+                db.Comentarios.Add(nueva);
+                db.SaveChanges();
+               
+            }
+            return View();
+        }
     }
 }

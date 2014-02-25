@@ -1,5 +1,27 @@
 ﻿@{
     ViewBag.Title = "Recommend";
-}
+} 
+<h4 align="center">HAZ TU COMENTARIO</h4>
 
-<h2>Recommend</h2>
+@using (Html.BeginForm()) {
+   
+        <div align="center" >
+
+        <div class="editor-label">
+            <label>Nombre</label>
+        </div>
+        <div class="editor-field">
+            <input name="nombre"/>
+        </div>
+         <div class="editor-label">
+            <label>Comentario</label>
+        </div>
+        <div class="editor-field">
+            <textarea cols=30 rows=10 name="comentario"> 
+             </textarea>
+        </div>
+        <p>
+            <input type="submit" value="Comentar" />
+        </p>
+    </div>
+}
