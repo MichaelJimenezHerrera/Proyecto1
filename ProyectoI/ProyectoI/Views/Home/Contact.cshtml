@@ -2,4 +2,60 @@
     ViewBag.Title = "Contact";
 }
 
-<h2>Contact</h2>
+@using (Html.BeginForm()) {
+   
+      <div align="center" >
+
+        <div class="editor-label">
+            <label>Nombre</label>
+        </div>
+        <div class="editor-field">
+            <input name="nombre"/>
+        </div>
+        <div class="editor-label">
+            <label>Email</label>
+        </div>
+        <div class="editor-field">
+            <input name="email"/>
+        </div>
+          <div class="editor-label">
+            <label>Contraseña</label>
+        </div>
+        <div class="editor-field">
+            <input type="password" name="contraseña"/>
+        </div>
+          <div class="editor-label">
+            <label>Asunto</label>
+        </div>
+        <div class="editor-field">
+            <input name="asunto"/>
+        </div>
+        <div class="editor-label">
+            <label>Comentario</label>
+        </div>
+        <div class="editor-field">
+            <textarea cols=30 rows=10 name="comentario"> 
+             </textarea>
+        </div>
+        <p>
+            <button id="ENV">Enviar</button>
+        </p>
+    </div>
+    
+    <script type="text/javascript">
+    $("#ENV").click(function () {
+        alert("funciona");
+        $.ajax({
+            url: '/Home/Contact',
+           // type: "POST",
+            data: { },
+        })
+    });
+</script>
+
+}
+
+
+
+
+
