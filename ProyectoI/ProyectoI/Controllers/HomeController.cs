@@ -28,6 +28,9 @@ namespace ProyectoI.Controllers
         [HttpPost]
         public ActionResult Contact(string nombre = "", string email = "", string contraseña = "", string asunto = "", string comentario = "")
         {
+            //MailMessage=  es como un mensaje de correo que se puede enviar con esta clase System.Net.Mail.MailMessage.SmtpClient
+            //System.Net.Mail.SmtpClient permite enviar mensaje mediante el protocolo Smtp
+
                    //datos del mensaje y el correo al que le vamos a enviar el mensaje
             System.Net.Mail.MailMessage mmsg = new System.Net.Mail.MailMessage();//Creamos un nuevo Objeto para el mensaje mmsg
            
@@ -37,8 +40,8 @@ namespace ProyectoI.Controllers
             mmsg.SubjectEncoding = System.Text.Encoding.UTF8;
 
             //mmsg.Bcc.Add("michaeljimenezh@hotmail.com"); para enviar una copia del correo si queremos
-           
-            mmsg.Body = comentario;//El mensaje que vamos a enviar
+            mmsg.Body = "Enviado por: "+nombre+".";
+            mmsg.Body += comentario;//El mensaje que vamos a enviar
             mmsg.BodyEncoding = System.Text.Encoding.UTF8;
             mmsg.IsBodyHtml = false; //Si no queremos que se envíe como HTML
             
@@ -58,7 +61,6 @@ namespace ProyectoI.Controllers
 
             cliente.Host = "smtp.gmail.com"; 
             //cliente.Host = "smtp.hotmail.com"; 
-
             // y enviamos nuestro correo
 
             try

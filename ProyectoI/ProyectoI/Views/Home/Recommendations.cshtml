@@ -1,26 +1,16 @@
 ﻿@{
     ViewBag.Title = "Recommendations";
 }
- <style type="text/css"> 
-      #com{ 
-          border: 10px outset #cccccc;
-          background-color: #cccccc;     
-          width: 400px; 
-          height:auto; 
-          background: orange;
-       } 
-          
-  </style>
-<h4 align="center">COMENTARIOS</h4>
-<div align="center">        
+ @Styles.Render("~/Content/style.css")
+<h4 id="recoh4">COMENTARIOS</h4>
+<div id="recodiv" >        
         @foreach (var item in ViewBag.comentarios)
         {   
-            <div id="yin-yang "></div>
+            
             <div id="com">        
-                <h6 align="left">@item.Nombre<br />@item.Fecha</h6><br/>
-                <h6 align="left">@item.Cometario</h6>
-                          
-            </div>  
+                <h6 id="recoh6" >Nombre:  @item.Nombre<br />Fecha:  @item.Fecha</h6>
+                <h6 id="recoh62">@item.Cometario</h6>                   
+            </div>   <br />  
         }
     
 

@@ -1,27 +1,27 @@
 ﻿@{
     ViewBag.Title = "Recommend";
 } 
-<h4 align="center">HAZ TU COMENTARIO</h4>
-
-@using (Html.BeginForm()) {
+ @Styles.Render("~/Content/style.css")
+ @using (Html.BeginForm()) {
    
-        <div align="center" >
-
-        <div class="editor-label">
-            <label>Nombre</label>
+        <div id="div" >
+        <h4 id="recomh4">HAZ TU COMENTARIO</h4>
+        <div id="div2"class="editor-label">
+            <label>Nombre:</label>
         </div>
-        <div class="editor-field">
-            <input name="nombre"/>
+        <div id="div3"class="editor-field">
+            <input id="inpu" name="nombre"placeholder="Nombre"/>
         </div>
-         <div class="editor-label">
-            <label>Comentario</label>
+         <div id="div4"class="editor-label">
+            <label>Comentario:</label>
         </div>
-        <div class="editor-field">
-            <textarea cols=30 rows=10 name="comentario"> 
+        <div id="div5"class="editor-field">
+            <textarea id="text"cols=30 rows=10 name="comentario"> 
              </textarea>
         </div>
+            <br />
         <p>
-            <input type="submit" value="Comentar" />
+            <input id="myButton"type="submit" value="Comentar" />
         </p>
     </div>
 }

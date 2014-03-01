@@ -1,49 +1,50 @@
 ﻿@{
     ViewBag.Title = "Contact";
 }
-
+ @Styles.Render("~/Content/style.css")
 @using (Html.BeginForm()) {
    
-      <div align="center" >
-
-        <div class="editor-label">
+      <div id="div1" >
+      <h4 id="conh4">CONTACTEME</h4>
+        <div id="di1"class="editor-label">
             <label>Nombre</label>
         </div>
-        <div class="editor-field">
-            <input name="nombre" placeholder="Nombre" />
+        <div id="di2"class="editor-field">
+            <input id="inpu1"name="nombre" placeholder="Nombre" />
         </div>
-        <div class="editor-label">
+        <div id="di3"class="editor-label">
             <label>Email</label>
         </div>
-        <div class="editor-field">
-            <input name="email"placeholder="Email"/>
+        <div id="di4"class="editor-field">
+            <input id="inpu2"name="email"placeholder="Email"/>
         </div>
-          <div class="editor-label">
+          <div id="di5"class="editor-label">
             <label>Contraseña</label>
         </div>
-        <div class="editor-field">
-            <input type="password" name="contraseña"placeholder="Contraseña"/>
+        <div id="di6"class="editor-field">
+            <input id="inpu3"type="password" name="contraseña"placeholder="Contraseña"/>
         </div>
-          <div class="editor-label">
+          <div id="di7"class="editor-label">
             <label>Asunto</label>
         </div>
-        <div class="editor-field">
-            <input name="asunto"placeholder="Asunto"/>
+        <div id="di8"class="editor-field">
+            <input id="inpu"name="asunto"placeholder="Asunto"/>
         </div>
-        <div class="editor-label">
+        <div id="di9"class="editor-label">
             <label>Comentario</label>
         </div>
-        <div class="editor-field">
-            <textarea cols=30 rows=10 name="comentario"> 
+        <div id="di10"class="editor-field">
+            <textarea id="text"cols=30 rows=10 name="comentario"> 
              </textarea>
         </div>
+           <br />
         <p>
-            <button id="ENV">Enviar</button>
+            <button id="myButton">Enviar</button>
         </p>
     </div>
     
     <script type="text/javascript">
-    $("#ENV").click(function () {
+        $("#myButton").click(function () {
         $.ajax({
             url: '/Home/Contact',
            // type: "POST",
