@@ -9,7 +9,7 @@ namespace ProyectoI.Models
     public class ComentarioDb : DbContext
     {
         public ComentarioDb()
-            : base("DefaultConnection")
+            : base("LoganDb")
         { 
    
         }
