@@ -26,7 +26,7 @@ namespace ProyectoI.Controllers
 
 
         [HttpPost]
-        public ActionResult Contact(string nombre = "", string email = "", string contraseña = "", string asunto = "", string comentario = "")
+        public ActionResult Contact(string nombre = "", string email = "", string asunto = "", string comentario = "")
         {
             //MailMessage=  es como un mensaje de correo que se puede enviar con esta clase System.Net.Mail.MailMessage.SmtpClient
             //System.Net.Mail.SmtpClient permite enviar mensaje mediante el protocolo Smtp
@@ -40,8 +40,8 @@ namespace ProyectoI.Controllers
             mmsg.SubjectEncoding = System.Text.Encoding.UTF8;
 
             //mmsg.Bcc.Add("michaeljimenezh@hotmail.com"); para enviar una copia del correo si queremos
-            mmsg.Body = "Enviado por: "+nombre+".";
-            mmsg.Body += comentario;//El mensaje que vamos a enviar
+
+            mmsg.Body = "Enviado por: " + nombre  + "\n" + "Correo: " + email + "\n" +"Comentario: "+ comentario;//El mensaje que vamos a enviar
             mmsg.BodyEncoding = System.Text.Encoding.UTF8;
             mmsg.IsBodyHtml = false; //Si no queremos que se envíe como HTML
             
@@ -52,15 +52,15 @@ namespace ProyectoI.Controllers
             System.Net.Mail.SmtpClient cliente = new System.Net.Mail.SmtpClient();//Creamos un objeto de cliente de correo
             
             cliente.Credentials =
-                new System.Net.NetworkCredential(email,contraseña);//Hay que crear las credenciales del correo que envia el mensaje
+                new System.Net.NetworkCredential("michaeljimenezh69@gmail.com", "huntertoto69");//Hay que crear las credenciales del correo que envia el mensaje
 
             
             cliente.Port = 587;//esto es obligatorio si enviamos el mensaje desde Gmail
             cliente.EnableSsl = true;//esto es obligatorio si enviamos el mensaje desde Gmail
 
 
-            cliente.Host = "smtp.gmail.com"; 
-            //cliente.Host = "smtp.hotmail.com"; 
+            cliente.Host = "smtp.gmail.com";
+            //cliente.Host = "smtp.live.com"; 
             // y enviamos nuestro correo
 
             try
@@ -93,12 +93,14 @@ namespace ProyectoI.Controllers
         }
 
        [HttpPost]
-        public ActionResult Recommend(string nombre = "", string comentario = "")
+        public ActionResult Recommend(string nombre = "", int telefono = 0, string correoelectronico = "", string comentario = "")
         {
             DateTime Hoy = DateTime.Now;
             string fecha = Hoy.ToString("d/M/yyyy hh:mm:ss tt"); 
             Comentario nueva = new Comentario();
             nueva.Nombre = nombre;
+            nueva.Telefono = telefono;
+            nueva.CorreoElectronico = correoelectronico;
             nueva.Cometario = comentario;
             nueva. Fecha=fecha ;
             if (ModelState.IsValid)

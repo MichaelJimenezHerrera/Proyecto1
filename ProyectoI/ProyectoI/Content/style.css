@@ -1,5 +1,6 @@
 
-      #text {
+      #text { 	font-size:15px;
+	padding:15px 66px;
           border-radius: 61px 61px 61px 61px;
           -moz-border-radius: 61px 61px 61px 61px;
           -webkit-border-radius: 61px 61px 61px 61px;
@@ -10,6 +11,8 @@
          background: #c4c1ba;
       }
        #inpu {
+       	  	font-size:15px;
+	padding:15px 66px;
           border-radius: 61px 61px 61px 61px;
           -moz-border-radius: 61px 61px 61px 61px;
           -webkit-border-radius: 61px 61px 61px 61px;
@@ -20,6 +23,8 @@
           background: #c4c1ba;
       }
       #inpu1 {
+      	 	font-size:15px;
+	padding:15px 66px;
           border-radius: 61px 61px 61px 61px;
           -moz-border-radius: 61px 61px 61px 61px;
           -webkit-border-radius: 61px 61px 61px 61px;
@@ -30,6 +35,20 @@
           background: #c4c1ba;
       }
       #inpu2 {
+      	font-size:15px;
+	padding:15px 66px;
+   
+          border-radius: 61px 61px 61px 61px;
+          -moz-border-radius: 61px 61px 61px 61px;
+          -webkit-border-radius: 61px 61px 61px 61px;
+          -webkit-box-shadow: 21px 8px 130px 0px rgba(0,0,0,0.75);
+         -moz-box-shadow: 21px 8px 130px 0px rgba(0,0,0,0.75);
+          box-shadow: 21px 8px 130px 0px rgba(0,0,0,0.75);
+          background: #c4c1ba;
+      }
+      #inpu3 {
+      	 	font-size:15px;
+	padding:15px 66px;
           border-radius: 61px 61px 61px 61px;
           -moz-border-radius: 61px 61px 61px 61px;
           -webkit-border-radius: 61px 61px 61px 61px;
@@ -39,7 +58,10 @@
           box-shadow: 21px 8px 130px 0px rgba(0,0,0,0.75);
           background: #c4c1ba;
       }
-      #inpu3 {
+      #inpu4 {
+      	 	font-size:15px;
+	padding:15px 66px;
+      	margin: 1em 0 1em 16.5em;
           border-radius: 61px 61px 61px 61px;
           -moz-border-radius: 61px 61px 61px 61px;
           -webkit-border-radius: 61px 61px 61px 61px;
@@ -53,8 +75,8 @@
 
         	width:800px;
       	margin:0 auto;
-      	height:500px;
-      	text-align: center
+      	height:775px;
+      	margin: 1em 0 1em 23em;
           border-radius: 61px 61px 61px 61px;
           -moz-border-radius: 61px 61px 61px 61px;
           -webkit-border-radius: 61px 61px 61px 61px;
@@ -70,8 +92,8 @@
 
         	width:800px;
       	margin:0 auto;
-      	height:700px;
-      	text-align: center
+      	height:750px;
+      	margin: 1em 0 1em 23em;
           border-radius: 61px 61px 61px 61px;
           -moz-border-radius: 61px 61px 61px 61px;
           -webkit-border-radius: 61px 61px 61px 61px;
@@ -94,6 +116,18 @@
 	text-align: center
 }
 #div5{
+	text-align: center
+}
+#div5{
+	text-align: center
+}
+#div6{
+	text-align: center
+}
+#div8{
+	text-align: center
+}
+#div9{
 	text-align: center
 }
 
@@ -140,7 +174,9 @@
 	top:1px;
 }
 
-    #com{  margin:0 auto;
+    #com{ 
+
+     margin:0 auto;
           border: 10px outset #cccccc;
           background-color: #cccccc;     
           width: 500px; 
@@ -171,9 +207,7 @@
       	height:300px;
       	text-align: center
       }
-       #recoh62{
-      	text-align: left
-      }
+     
        #recoh6{
       	text-align: left
       }
@@ -199,12 +233,7 @@
       #di4{
       text-align: center	
       }
-      #di5{
-      text-align: center	
-      }
-      #di6{
-      text-align: center	
-      }
+    
       #di7{
       text-align: center	
       }
@@ -283,30 +312,10 @@
            width:200px;
            }
       
-#container ul.menu li{  
-    float:left;  
-    margin-right:10px;    
-}  
-#container ul.menu li{  
-    font-weight:700;  
-    display:block;  
-    padding:10px 15px;  
-    background:#303030;  
-    margin-bottom:3px;  
-    border:1px solid #3e3e3e;  
-    border-width:1px 1px 1px 1px;  
-    position:relative;  
-    color:#e4e1cd;  
-    cursor:pointer;  
-    border-radius:3px 3px 0 0;  
-    -moz-border-radius:3px 3px 0 0;  
-    -webkit-border-radius:3px 3px 0 0;  
-}  
+ 
 
 
-      #container ul.menu li.active{  
-    background:#BC9090;  
-    top:1px;  
-    border-bottom:0;  
-    color:#fff;  
-} 
+
+
+
+ 

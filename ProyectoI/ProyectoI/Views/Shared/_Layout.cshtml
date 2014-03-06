@@ -11,53 +11,88 @@
     @Scripts.Render("~/bundles/js/bootstrap") 
     @Scripts.Render("~/bundles/jquery")
 </head>
-    
 
 <body id="body">
-     <nav class="navbar navbar-inverse " role="navigation">
-          
-            <div id="container">  
-                <ul class="menu">  
-                    <li id="Home"><a  href="/Home/Home" >Home</a></li>  
-                    <li id="Contact"><a  href="/Home/Contact" >Contact</a></li>  
-                    <li id="Recommend"><a  href="/Home/Recommend" >Recommend</a></li>
-                    <li id="Recommendations"><a  href="/Home/Recommendations" >Recommendations</a></li>  
-                </ul>  
-            </div>  
-     
-      <script type="text/javascript">
-          $(document).ready(function () {
-              $(".menu > li").click(function (e) {
-                  var a = e.target.id;
-                  //desactivamos seccion y activamos elemento de menu  
-                  $(".menu li.active").removeClass("active");
-                  $(".menu #" + a).addClass("active");
-                  //ocultamos divisiones, mostramos la seleccionada  
-                  $(".content").css("display", "none");
-                  $("." + a).fadeIn();
-              });
-          });
-</script>
-        
-        <marquee scrollamount="3" behavior="alternate" bgcolor="#FFA100" > 
-           <div id="carr" >
-             <img id="i1"src="~/Content/themes/base/images/1.jpg" runat="server"/>
-             <img id="i2"src="~/Content/themes/base/images/2.jpg"  runat="server"/>
-             <img id="i3"src="~/Content/themes/base/images/3.jpg"  runat="server"/>
-             <img id="i4"src="~/Content/themes/base/images/4.jpg"   runat="server"/>
-             <img id="i5"src="~/Content/themes/base/images/5.jpg"   runat="server"/>
-             <img id="i6"src="~/Content/themes/base/images/6.jpg" runat="server"/>
-             <img id="i7"src="~/Content/themes/base/images/7.jpg"   runat="server"/>
-             <img id="i8"src="~/Content/themes/base/images/8.jpg"   runat="server"/>
-             <img id="i9"src="~/Content/themes/base/images/9.jpg"   runat="server"/>
-             <img id="i10"src="~/Content/themes/base/images/10.jpg"   runat="server"/>
-          </div> 
-       </marquee>
+   <nav class="navbar navbar-inverse " role="navigation">    
+         <div id="xxx">
+            <button id="1" value ="PROFILE1" type="button" class="btn btn-warning" onClick="location.href='/Home/Home'">Home</button>
+             <button id="2" value ="PROFILE2" type="button" class="btn btn-warning" onClick="location.href='/Home/Contact'">Contact</button>
+             <button id="3" value ="PROFILE3" type="button" class="btn btn-warning" onClick="location.href='/Home/Recommend'">Recommend</button>
+             <button id="4" value ="PROFILE4" type="button" class="btn btn-warning" onClick="location.href='/Home/Recommendations'">Recommendations</button>
+            
+         </div> 
+
+
+
+
+
+
+
+
+
+
+
+
+
    </nav>
 
 
 
-  
+    <script type="text/javascript">
+        function displayed() {
+            var selectedprofile = document.getElementById('xxx').value;
+            switch (selectedprofile) {
+                case "PROFILE1":
+                    displayed_P1();
+                    break;
+                case "PROFILE2":
+                    displayed_P2();
+                    break;
+                case "PROFILE3":
+                    displayed_P3();
+                    break;
+                case "PROFILE4":
+                    displayed_P4();
+                    break;
+
+            }
+
+
+        };
+        //visible profile 1 and hides the other wed
+        function displayed_P1() {
+            $('#1').addClass("active");
+            $('#2').removeClass("active");
+            $('#3').removeClass("active");
+            $('#4').removeClass("active");
+           
+        };
+        //visible profile 2 and hides the other wed
+        function displayed_P2() {
+            document.getElementById('2').addClass("active");
+            document.getElementById('1').removeClass("active");
+            document.getElementById('3').removeClass("active");
+            document.getElementById('4').removeClass("active");
+        };
+        //visible profile 3 and hides the other wed
+        function displayed_P3() {
+            document.getElementById('3').addClass("active");
+            document.getElementById('2').removeClass("active");
+            document.getElementById('1').removeClass("active");
+            document.getElementById('4').removeClass("active");
+        };
+        //visible profile 4 and hides the other wed
+        function displayed_P4() {
+            document.getElementById('4').addClass("active");
+            document.getElementById('2').removeClass("active");
+            document.getElementById('3').removeClass("active");
+            document.getElementById('1').removeClass("active");
+        };
+
+
+
+      
+</script>
    @RenderBody()
     @RenderSection("scripts", required: false)
 

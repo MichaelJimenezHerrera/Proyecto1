@@ -10,25 +10,19 @@
             <label>Nombre</label>
         </div>
         <div id="di2"class="editor-field">
-            <input id="inpu1"name="nombre" placeholder="Nombre" />
+            <input type="text"id="inpu1"name="nombre" placeholder="Nombre" />
         </div>
         <div id="di3"class="editor-label">
             <label>Email</label>
         </div>
         <div id="di4"class="editor-field">
-            <input id="inpu2"name="email"placeholder="Email"/>
-        </div>
-          <div id="di5"class="editor-label">
-            <label>Contraseña</label>
-        </div>
-        <div id="di6"class="editor-field">
-            <input id="inpu3"type="password" name="contraseña"placeholder="Contraseña"/>
+            <input type="email"id="inpu2"name="email"placeholder="Email"/>
         </div>
           <div id="di7"class="editor-label">
             <label>Asunto</label>
         </div>
         <div id="di8"class="editor-field">
-            <input id="inpu"name="asunto"placeholder="Asunto"/>
+            <input type="text"id="inpu"name="asunto"placeholder="Asunto"/>
         </div>
         <div id="di9"class="editor-label">
             <label>Comentario</label>
@@ -45,11 +39,14 @@
     
     <script type="text/javascript">
         $("#myButton").click(function () {
-        $.ajax({
-            url: '/Home/Contact',
-           // type: "POST",
-            data: { },
-        })
+           
+          
+            $.ajax({
+                url: '/Home/Contac',
+                type: '',
+                data: { },
+            })
+  
     });
 </script>
 }
